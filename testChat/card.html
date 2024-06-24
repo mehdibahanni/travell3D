@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Information</title>
+    <style>
+        /* Your CSS styles */
+        .card-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            align-items: stretch;
+        }
+        .card {
+            width: 300px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            margin: 20px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #f9f9f9;
+            position: relative;
+            overflow: hidden;
+        }
+        .card img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        .card h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .review-content p {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .category {
+            font-weight: bold;
+        }
+        .evaluation {
+            color: #009900;
+        }
+        .reviews {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            width: 100%;
+            background-color: #fff;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 0 0 10px 10px;
+            transition: top 0.3s ease;
+            z-index: 1;
+            max-height: 590px;
+            overflow-y: auto;
+        }
+        .reviews.show {
+            top: 0;
+        }
+        .review {
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 10px;
+        }
+        .review:last-child {
+            border-bottom: none; /* Remove border for the last review */
+        }
+        .show-reviews {
+            color: blue;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        /* New CSS styles for comment input */
+        .comment-input {
+            margin-top: 20px;
+        }
+        .comment-input textarea {
+            width: calc(100% - 20px);
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            resize: none;
+        }
+        .comment-input button {
+            margin-top: 10px;
+            padding: 8px 15px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="card-container">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="/imges/mamounia hotel.jpg" alt="Hotel Image">
+            <h2>Hotel A</h2>
+            <p><strong>Address:</strong> 123 Main St, City, Country</p>
+            <p><strong>Latitude:</strong> 40.7128</p>
+            <p><strong>Longitude:</strong> -74.0060</p>
+            <p><strong>Category:</strong> <span class="category">Hotel</span></p>
+            <p><strong>Evaluation:</strong> <span class="evaluation">4.5/5</span></p>
+            <p><strong>Reviews:</strong> <span class="reviews-count">800</span> <span class="show-reviews">Show Reviews</span></p>
+            <!-- Reviews -->
+            <div class="reviews">
+                <h3>Reviews</h3>
+                <div class="review">
+                    <p><strong>John Doe</strong> - <em>April 1, 2024</em></p>
+                    <p>Great location, friendly staff!</p>
+                </div>
+                <div class="review">
+                    <div class="review-rating">★★★★★</div>
+                    <div class="reviewer-info"><p><strong>John Doe</strong> - <em>April 1, 2024</em></p></div>
+                    <div class="review-content"><p>The hotel was fantastic! Great location, friendly staff, and clean rooms. I would definitely stay here again.</p></div>
+                </div>
+                <div class="review">
+                    <div class="review-rating">★★★★★</div>
+                    <div class="reviewer-info"><p><strong>John Doe</strong> - <em>April 1, 2024</em></p></div>
+                    <div class="review-content"><p>The hotel was fantastic! Great location, friendly staff, and clean rooms. I would definitely stay here again.</p></div>
+                </div>
+                <div class="review">
+                    <div class="review-rating">★★★★★</div>
+                    <div class="reviewer-info"><p><strong>John Doe</strong> - <em>April 1, 2024</em></p></div>
+                    <div class="review-content"><p>The hotel was fantastic! Great location, friendly staff, and clean rooms. I would definitely stay here again.</p></div>
+                </div>
+                <div class="review">
+                    <div class="review-rating">★★★★★</div>
+                    <div class="reviewer-info"><p><strong>John Doe</strong> - <em>April 1, 2024</em></p></div>
+                    <div class="review-content"><p>The hotel was fantastic! Great location, friendly staff, and clean rooms. I would definitely stay here again.</p></div>
+                </div>
+                <div class="review">
+                    <div class="review-rating">★★★★★</div>
+                    <div class="reviewer-info"><p><strong>John Doe</strong> - <em>April 1, 2024</em></p></div>
+                    <div class="review-content"><p>The hotel was fantastic! Great location, friendly staff, and clean rooms. I would definitely stay here again.</p></div>
+                </div>
+                <div class="review">
+                    <div class="review-rating">★★★★★</div>
+                    <div class="reviewer-info"><p><strong>John Doe</strong> - <em>April 1, 2024</em></p></div>
+                    <div class="review-content"><p>The hotel was fantastic! Great location, friendly staff, and clean rooms. I would definitely stay here again.</p></div>
+                </div>
+                <div class="review">
+                    <div class="review-rating">★★★★★</div>
+                    <div class="reviewer-info"><p><strong>John Doe</strong> - <em>April 1, 2024</em></p></div>
+                    <div class="review-content"><p>The hotel was fantastic! Great location, friendly staff, and clean rooms. I would definitely stay here again.</p></div>
+                </div>
+                <!-- Add more reviews as needed -->
+            </div>
+            <!-- Comment input -->
+            <div class="comment-input">
+                <textarea placeholder="Write your comment here..."></textarea>
+                <button>Submit</button>
+            </div>
+        </div>
+        <!-- Repeat the above structure for the remaining 8 cards -->
+        <!-- Card 2 -->
+        <!-- Card 3 -->
+        <!-- Card 4 -->
+        <!-- Card 5 -->
+        <!-- Card 6 -->
+        <!-- Card 7 -->
+        <!-- Card 8 -->
+        <!-- Card 9 -->
+    </div>
+    <script>
+        // JavaScript code to show reviews
+        document.querySelectorAll('.show-reviews').forEach(function(link) {
+            link.addEventListener('click', function() {
+                var card = this.closest('.card');
+                var reviewsContainer = card.querySelector('.reviews');
+                reviewsContainer.classList.toggle('show');
+            });
+        });
+    </script>
+</body>
+</html>

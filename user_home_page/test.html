@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Fixed Image in Section</title>
+<link rel="stylesheet" href="styles.css">
+<style>
+    .fixed-section {
+    position: relative;
+    width: 100%;
+    height: 400px; /* Set the desired height of your section */
+    overflow: hidden; /* Hide content behind the section */
+}
+
+.fixed-section img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1; /* Send image behind other content */
+}
+
+.fixed-section .content {
+    padding: 20px; /* Optional: Padding for the section */
+    background-color: #f9f9f9; /* Optional: Background color for the section */
+}
+
+.other-content {
+    /* Styles for other content outside the fixed section */
+}
+
+</style>
+</head>
+<body>
+
+<section class="fixed-section">
+    <img src="image.jpg" alt="Fixed Image">
+    <div class="content">
+        <h2>This is a Fixed Section</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi.</p>
+    </div>
+</section>
+
+<div class="other-content">
+    <!-- Your other content outside the fixed section -->
+</div>
+
+</body>
+</html>

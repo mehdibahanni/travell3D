@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Travel3D</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="info">
+                <h2>Travel3D</h2>
+                <div class="list">
+                    <div class="list-btn">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <ul class="list-content show">
+                        <li><a href="">connection</a></li>
+                        <li><a href="">service</a></li>
+                        <li><a href="">about</a></li>
+                        <li><a href="">contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="user_picture">
+                <img src="/imges/WhatsApp Image 2023-12-23 at 02.00.23_66bceade.jpg" alt="" class="picture">
+            </div>
+        </nav>
+    </header>
+    <!-- start Mian -->
+    <section>
+        <div class="blur"></div>
+        <h2 class="title">Make you're <br> experience in Morocco <br> unforgettable <span id="cities"></span> </h2>
+    </section>
+
+    <main>
+        <!-- Start Options -->
+        <div class="selecte-field">
+            <div class="selecte-text">
+                <p>Select Interests</p>
+                <img id="rotate-arrow" src="/icons/arrow_icon.png" alt="">
+            </div>
+            <ul class="options">
+                <li class="option" data-name="hotels">
+                    <i class="fa-solid fa-hotel"></i>
+                    <p>Hotels</p>
+                </li>
+                <li class="option" data-name="Restaurants">
+                    <i class="fa-solid fa-utensils"></i>
+                    <p>Restaurants</p>
+                </li>
+                <li class="option" data-name="Places">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <p>Places to go</p>
+                </li>
+                <li class="option" data-name="stadiums">
+                    <i class="fa-solid fa-futbol"></i>
+                    <p>Football stadiums</p>
+                </li>
+                <li class="option">
+                    <p>Other...</p>
+                </li>
+            </ul>
+        </div>
+        <!-- End Options -->
+        <!-- Start Search Area -->
+        <div class="search-area">
+            <div class="search-contianer">
+                <img class="search-icone" src="/icons/search_icon.png" alt="">
+                <input class="search-value" type="search" placeholder="Enter Places">
+                <img class="filter-icon" src="/icons/filter_icon.png" alt="filter-icon">
+            </div>
+            <div class="filter-area">
+                <span class="filter places" data-name="Casablanca">Casablanca</span>
+                <span class="filter places" data-name="Marrakech">Marrakech</span>
+                <span class="filter places" data-name="Raba">Raba</span>
+            </div>
+        </div>
+        <!-- End Search Area -->
+        <!-- Start Parameters -->
+        <div class="parameter-area-btn">
+            <div class="parameter-btn">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <p class="title">Travel3D</p>
+        </div>
+        <div class="parameter-area">
+            <div class="parameter">
+                <img src="/icons/parameter_icon.png" alt="">
+                <p>Parameters</p>
+            </div>
+            <div class=" parameter prive">
+                <img src="/icons/privacy_policy.png" alt="">
+                <p>Privacy Policy</p>
+            </div>
+            <div class=" parameter prive">
+                <img src="/icons/password_icone.png" alt="">
+                <p>Change Password</p>
+            </div>
+            <div class=" parameter prive">
+                <img src="/icons/parameter_icon.png" alt="">
+                <p>Account Settings</p>
+            </div>
+            <div class=" parameter log-out">
+                <button class="regist" id="rg-btn">Log out</button>
+            </div>
+        </div>
+        <!-- End Parameters -->
+        <!-- Start Content -->
+        <div class="main-container">
+            <div class="card-container">
+                <!-- Card 1 -->
+                <div class="card" data-name="hotel ">
+                    <img src="/imges/Hotel La Mamounia.jpeg" alt="Hotel Image">
+                    <h2>Hotel La Mamounia</h2>
+                    <br>
+                    <br>
+                    <div class="card-content">
+                        <p><strong>Address:</strong> Avenue Bab Jdid, Marrakech 40040, Morocco</p><br>
+                        <p><strong>Latitude:</strong> 31.6251</p>
+                        <p><strong>Longitude:</strong> -7.9993</p>
+                        <p><strong>Category:</strong> <span class="category"> Luxury Hotel</span></p>
+                        <p><strong>Evaluation:</strong> <span class="evaluation">9.5/10</span></p>
+                        <p><strong>Reviews:</strong> <span class="reviews-count">0</span> <span
+                                class="show-reviews">Show Reviews</span></p>
+                    </div>
+                    <!-- Reviews -->
+                    <div class="reviews">
+                        <h3>Reviews</h3>
+                        <div class="review">
+                            <div class="review-rating">★★★★★</div>
+                            <div class="reviewer-info">
+                                <p><strong>John Doe</strong> - <em>April 1, 2024</em></p>
+                            </div>
+                            <div class="review-content">
+                                <p>The hotel was fantastic! Great location, friendly staff, and clean rooms. I would
+                                    definitely stay here again.</p>
+                            </div>
+                        </div>
+                        <!-- Add more reviews as needed -->
+                    </div>
+                    <!-- Comment input -->
+                    <button class="comment-btn">Comment</button>
+
+                    <!-- Start Comment Sections -->
+                    <div class="fa-comment-medical">
+                        <div class="close-btn">Edit</div>
+                        <div class="post">
+                            <div class="text">Thanks For Sharing Your Experience</div>
+                        </div>
+                        <form action="">
+                            <div class="fa-weight-star">
+                                <input type="radio" name="rate" id="rate-5">
+                                <label for="rate-5" class="fa-solid fa-star"></label>
+                                <input type="radio" name="rate" id="rate-4">
+                                <label for="rate-4" class="fa-solid fa-star"></label>
+                                <input type="radio" name="rate" id="rate-3">
+                                <label for="rate-3" class="fa-solid fa-star"></label>
+                                <input type="radio" name="rate" id="rate-2">
+                                <label for="rate-2" class="fa-solid fa-star"></label>
+                                <input type="radio" name="rate" id="rate-1">
+                                <label for="rate-1" class="fa-solid fa-star"></label>
+                            </div>
+                            <div class="textarea">
+                                <textarea rows="30" placeholder="Describe Your Experience..."></textarea>
+                            </div>
+                        </form>
+                        <div class="submit-btn">
+                            <button>Post</button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Card 2 -->
+                <div class="card" data-name="hotels">
+                    <img src="/imges/Four Seasons Hotel Casablanca.jpeg" alt="Hotel Image">
+                    <h2> Four Seasons Hotel Casablanca</h2>
+                    <div class="card-content">
+                        <p><strong>Address:</strong> Address: Boulevard de la Corniche, Ain Diab, Casablanca 20050,
+                            Morocco</p>
+                        <p><strong>Latitude:</strong> 33.5886</p>
+                        <p><strong>Longitude:</strong> -7.7141</p>
+                        <p><strong>Category:</strong> <span class="category"> Luxury Hotel</span></p>
+                        <p><strong>Evaluation:</strong> <span class="evaluation">9.3/10</span></p>
+                        <p><strong>Reviews:</strong> <span class="reviews-count">0</span> <span
+                                class="show-reviews">Show Reviews</span></p>
+                    </div>
+                    <!-- Reviews -->
+                    <div class="reviews">
+                        <h3>Reviews</h3>
+                        <!-- Add more reviews as needed -->
+                    </div>
+                    <!-- Comment input -->
+                    <button class="comment-btn">Comment</button>
+                    <!-- Start Comment Sections -->
+                    <div class="fa-comment-medical">
+                        <div class="close-btn">Edit</div>
+                        <div class="post">
+                            <div class="text">Thanks For Sharing Your Experience</div>
+                        </div>
+                        <form action="">
+                            <div class="fa-weight-star">
+                                <input type="radio" name="rate" id="rate-5">
+                                <label for="rate-5" class="fa-solid fa-star"></label>
+                                <input type="radio" name="rate" id="rate-4">
+                                <label for="rate-4" class="fa-solid fa-star"></label>
+                                <input type="radio" name="rate" id="rate-3">
+                                <label for="rate-3" class="fa-solid fa-star"></label>
+                                <input type="radio" name="rate" id="rate-2">
+                                <label for="rate-2" class="fa-solid fa-star"></label>
+                                <input type="radio" name="rate" id="rate-1">
+                                <label for="rate-1" class="fa-solid fa-star"></label>
+                            </div>
+                            <div class="textarea">
+                                <textarea rows="30" placeholder="Describe Your Experience..."></textarea>
+                            </div>
+                        </form>
+                        <div class="submit-btn">
+                            <button>Post</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="card" data-name="hotels">
+                    <img src="/imges/Royal Mansour Marrakechjpeg.jpeg" alt="Hotel Image">
+                    <h2> Royal Mansour Marrakech</h2>
+                    <div class="card-content">
+                        <p><strong>Address:</strong>Address: Rue Abou Abbas El Sebti, Marrakech 40000, Morocco</p><br>
+                        <p><strong>Latitude:</strong> 31.6300</p>
+                        <p><strong>Longitude:</strong> -7.9885</p>
+                        <p><strong>Category:</strong> <span class="category"> Luxury Hotel</span></p>
+                        <p><strong>Evaluation:</strong> <span class="evaluation">9.6/10</span></p>
+                        <p><strong>Reviews:</strong> <span class="reviews-count">0</span> <span
+                                class="show-reviews">Show Reviews</span></p>
+                    </div>
+                    <!-- Reviews -->
+                    <div class="reviews">
+                        <h3>Reviews</h3>
+                        <div class="review">
+                            <div class="review-rating">★★★★★</div>
+                            <div class="reviewer-info">
+                                <p><strong>John Doe</strong> - <em>April 1, 2024</em></p>
+                            </div>
+                            <div class="review-content">
+                                <p>The hotel was fantastic! Great location, friendly staff, and clean rooms. I would
+                                    definitely stay here again.</p>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <div class="review-rating">★★★★★</div>
+                            <div class="reviewer-info">
+                                <p><strong>John Doe</strong> - <em>April 1, 2024</em></p>
+                            </div>
+                            <div class="review-content">
+                                <p>The hotel was fantastic! Great location, friendly staff, and clean rooms. I would
+                                    definitely stay here again.</p>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <div class="review-rating">★★★★★</div>
+                            <div class="reviewer-info">
+                                <p><strong>John Doe</strong> - <em>April 1, 2024</em></p>
+                            </div>
+                            <div class="review-content">
+                                <p>The hotel was fantastic! Great location, friendly staff, and clean rooms. I would
+                                    definitely stay here again.</p>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <div class="review-rating">★★★★★</div>
+                            <div class="reviewer-info">
+                                <p><strong>John Doe</strong> - <em>April 1, 2024</em></p>
+                            </div>
+                            <div class="review-content">
+                                <p>The hotel was fantastic! Great location, friendly staff, and clean rooms. I would
+                                    definitely stay here again.</p>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <div class="review-rating">★★★★★</div>
+                            <div class="reviewer-info">
+                                <p><strong>John Doe</strong> - <em>April 1, 2024</em></p>
+                            </div>
+                            <div class="review-content">
+                                <p>The hotel was fantastic! Great location, friendly staff, and clean rooms. I would
+                                    definitely stay here again.</p>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <div class="review-rating">★★★★★</div>
+                            <div class="reviewer-info">
+                                <p><strong>John Doe</strong> - <em>April 1, 2024</em></p>
+                            </div>
+                            <div class="review-content">
+                                <p>The hotel was fantastic! Great location, friendly staff, and clean rooms. I would
+                                    definitely stay here again.</p>
+                            </div>
+                        </div>
+                        <div class="review">
+                            <div class="review-rating">★★★★★</div>
+                            <div class="reviewer-info">
+                                <p><strong>John Doe</strong> - <em>April 1, 2024</em></p>
+                            </div>
+                            <div class="review-content">
+                                <p>The hotel was fantastic! Great location, friendly staff, and clean rooms. I would
+                                    definitely stay here again.</p>
+                            </div>
+                        </div>
+                        <!-- Add more reviews as needed -->
+                    </div>
+                    <!-- Comment input -->
+                    <button class="comment-btn">Comment</button>
+                    <!-- Start Comment Sections -->
+                    <div class="fa-comment-medical">
+                        <div class="close-btn">Edit</div>
+                        <div class="post">
+                            <div class="text">Thanks For Sharing Your Experience</div>
+                        </div>
+                        <form action="">
+                            <div class="fa-weight-star">
+                                <input type="radio" name="rate" id="rate-5">
+                                <label for="rate-5" class="fa-solid fa-star"></label>
+                                <input type="radio" name="rate" id="rate-4">
+                                <label for="rate-4" class="fa-solid fa-star"></label>
+                                <input type="radio" name="rate" id="rate-3">
+                                <label for="rate-3" class="fa-solid fa-star"></label>
+                                <input type="radio" name="rate" id="rate-2">
+                                <label for="rate-2" class="fa-solid fa-star"></label>
+                                <input type="radio" name="rate" id="rate-1">
+                                <label for="rate-1" class="fa-solid fa-star"></label>
+                            </div>
+                            <div class="textarea">
+                                <textarea rows="30" placeholder="Describe Your Experience..."></textarea>
+                            </div>
+                        </form>
+                        <div class="submit-btn">
+                            <button>Post</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Content -->
+    </main>
+    <script src="main.js"></script>
+</body>
+
+</html>

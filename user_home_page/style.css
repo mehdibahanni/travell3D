@@ -1,0 +1,927 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root {
+    --nav-color: rgb(255, 251, 251);
+    --body-color: rgba(255, 255, 255, 0.993);
+    --button-color: white;
+    --button-bg: black;
+    --list-color: white;
+    --text-color: black;
+    --title-color: white;
+
+    --border-radius: 5rem;
+}
+
+body {
+    background-color: rgb(231, 231, 231);
+    height: 100vh;
+}
+
+/* Start Nav Bar */
+header {
+    width: 100%;
+    max-width: 1200px;
+    height: 60px;
+}
+
+nav {
+
+    background-color: var(--nav-color);
+    color: white;
+    position: fixed;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 999;
+}
+
+nav .info {
+    width: 95%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+nav .info h2 {
+    font-family: sans-serif;
+    padding: 5px 10px;
+    letter-spacing: 4px;
+    font-size: 35px;
+    border-radius: 5px;
+    background-color: var(--button-bg);
+    color: var(--button-color);
+}
+
+.list .list-content {
+    list-style: none;
+    display: flex;
+}
+
+.list .list-content li {
+    padding: 10px 0;
+    margin: 0 15px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    text-align: center;
+    transition: 0.3s;
+}
+
+@media(min-width:800px) {
+    .list .list-content li:hover {
+        border-bottom: 1px solid black;
+    }
+}
+
+.list .list-content li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-size: 15px;
+}
+
+nav .user_picture {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+nav .user_picture .picture {
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+button {
+    width: 120px;
+    height: 40px;
+    border: none;
+    font-family: sans-serif;
+    background-color: var(--button-bg);
+    color: var(--button-color);
+    border-radius: 5px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+/* End Nav Bar */
+/* Start Selecte Options */
+
+.selecte-field {
+    position: fixed;
+    width: 250px;
+    padding: 10px;
+    z-index: 1;
+    top: 70px;
+    transition: 0.5s all ease;
+}
+
+.selecte-field .selecte-text {
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.901);
+    overflow: hidden;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.selecte-field .selecte-text img {
+    height: 15px;
+    width: 15px;
+    transition: 0.4s;
+}
+
+.selecte-field .options {
+    background-color: rgba(255, 255, 255, 0.89);
+    border-radius: 5px;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.selecte-field .options .option {
+    box-sizing: border-box;
+    width: 100%;
+    list-style: none;
+    padding: 15px 0 15px 20px;
+    position: relative;
+    font-family: sans-serif;
+    font-size: 17px;
+    display: flex;
+}
+
+.selecte-field .options .option p {
+    padding-left: 20px;
+}
+
+.selecte-field .options .option:not(:last-child) {
+    border-bottom: 1px solid rgb(201, 201, 201);
+
+}
+
+.selecte-field .options .option i .fa-solid.fa-hotel {
+    position: absolute;
+    width: 1px;
+
+}
+
+.selecte-field .options .option:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.selecte-field ul li p {
+    font-size: 15px;
+    padding-left: 45px;
+}
+
+/* javaSript  */
+.selecte-field .options.show {
+    transition: opacity 0.3s ease;
+    visibility: visible;
+    z-index: 999;
+    opacity: 1;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.selecte-field .selecte-text img.rotate {
+    transition: 0.4s;
+    transform: rotate(180deg);
+}
+
+/* End Selecte Options */
+/* ##########################################################################" */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+}
+
+.card-content p {
+    line-height: 30px;
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+.card h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.review-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.category {
+    font-weight: bold;
+}
+
+.evaluation {
+    color: #009900;
+}
+
+.reviews {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
+    transition: top 0.3s ease;
+    z-index: 1;
+    max-height: 450px;
+    overflow-y: auto;
+}
+
+.reviews.show {
+    top: 0;
+}
+
+::-webkit-scrollbar {
+    overflow-y: auto;
+}
+
+.review {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.review:last-child {
+    border-bottom: none;
+    /* Remove border for the last review */
+}
+
+.show-reviews {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.comment-btn {
+    /* padding: 10px 15px; */
+    background-color: darkcyan;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 10px 0px;
+    width: 100%;
+}
+
+/* New CSS styles for comment input */
+
+/* Start Search Area */
+.search-area {
+    height: calc(100vh - 70%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px auto;
+    max-width: 800px;
+    width: 100%;
+}
+
+.search-area .search-contianer {
+    width: 100%;
+    padding: 20px 20px;
+    border-radius: 5rem;
+    font-size: 15px;
+    font-family: sans-serif;
+    background-color: white;
+    display: flex;
+    text-align: center;
+    justify-content: space-around;
+    transition: 0.5s all ease;
+}
+
+.search-area .search-contianer .search-icone {
+    width: 2em;
+    height: 2rem;
+}
+
+.search-area .search-contianer .filter-icon {
+    width: 2rem;
+    cursor: pointer;
+}
+
+.search-area .search-contianer input[type="search"] {
+    padding: 10px 20px;
+    width: 90%;
+    border: none;
+    outline: none;
+    font-size: 17px;
+}
+
+.search-area .search-contianer::-webkit-input-placeholder {
+    font-family: sans-serif;
+    font-size: 15px;
+}
+
+.search-area .filter-area {
+    display: none;
+    height: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+.search-area .filter-area.show {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 20px;
+}
+
+.search-area .filter-area span {
+    padding: 15px;
+    background-color: var(--button-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    box-shadow: 0 5px 8px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.search-area .filter-area span:hover,
+.search-area .filter-area span.active {
+    box-shadow: none
+}
+
+/* End Search Area */
+
+/* Start Parameter Area */
+.parameter-area-btn {
+    width: 200px;
+    height: 50px;
+    background-color: var(--nav-color);
+    position: fixed;
+    right: -150px;
+    top: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px 0 0;
+    z-index: 1;
+    overflow: hidden;
+    padding: 0 10px;
+    transition: all 0.5s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+}
+
+.parameter-area-btn.active {
+    right: 0;
+}
+
+.parameter-area-btn .title {
+    background-color: var(--button-bg);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 19px;
+}
+
+.parameter-btn {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.parameter-btn span {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--button-bg);
+    left: 0;
+    top: 25%;
+    transition: 0.3s;
+}
+
+.parameter-btn span:nth-child(2) {
+    position: absolute;
+    width: 70%;
+    height: 4px;
+    background-color: var(--button-bg);
+    left: 0;
+    top: 50%;
+}
+
+.parameter-btn span:nth-child(3) {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--button-bg);
+    left: 0;
+    top: 75%;
+}
+
+.parameter-area {
+    width: 200px;
+    background-color: var(--nav-color);
+    position: fixed;
+    right: -200px;
+    top: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 0 5px;
+    z-index: 5;
+    overflow: hidden;
+    transition: all 0.5s ease;
+}
+
+.add-new-card a {
+    text-decoration: none;
+    color: black;
+}
+
+.parameter-area .parameter:nth-child(1) {
+    border-top: 1px solid black;
+}
+
+.parameter-area.active {
+    right: 0;
+}
+
+.parameter-area .parameter-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.parameter-area .parameter {
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    background-color: rgba(255, 255, 255, 0.901);
+    color: black;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    /* position: absolute; */
+}
+
+.parameter-area .parameter:not(:last-child) {
+    border-bottom: 1px solid rgb(201, 201, 201)
+}
+
+.parameter-area .parameter:not(:last-child):hover {
+    background-color: rgb(218, 216, 216);
+    cursor: pointer;
+}
+
+.parameter-area .parameter img {
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    left: 20px;
+    margin: 0 10px;
+}
+
+/* End Parameter Area */
+
+/* ############################################################################### */
+.fa-comment-medical {
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    width: 300px;
+    background: #eeeded;
+    padding: 20px 30px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+
+.fa-comment-medical form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.fa-comment-medical::before {
+    display: none;
+}
+
+.fa-comment-medical .fa-weight-star input {
+    display: none;
+}
+
+.fa-comment-medical input:not(:checked)+label:hover,
+.fa-comment-medical input:not(:checked)+label:hover~label {
+    color: rgb(0, 138, 57);
+}
+
+.fa-comment-medical form input:checked~label {
+    color: rgb(0, 138, 57);
+}
+
+.fa-comment-medical form input#rate-5:checked~label {
+    color: rgb(0, 160, 67);
+    text-shadow: 0 0 20px rgb(0, 160, 67);
+    color: black;
+}
+
+.fa-weight-star label {
+    font: 40px;
+    color: #b8b8b8;
+    margin: 10px;
+    padding: 0 0 10px 0;
+    float: right;
+}
+
+.fa-comment-medical .textarea {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+.fa-comment-medical .textarea textarea {
+    height: 100px;
+    width: 100%;
+    border: 1px solid rgb(196, 196, 196);
+    outline: none;
+    background: #ffffff;
+    color: #020202 !important;
+    padding: 10px;
+    resize: none;
+    overflow-y: auto;
+    font-size: 15px;
+    font: 500;
+}
+
+.fa-comment-medical .submit-btn {
+    height: 45px;
+    width: 100%;
+    margin-top: 20px;
+    display: fle;
+}
+
+.fa-comment-medical .submit-btn button {
+    margin: 0 auto;
+    height: 100%;
+    outline: none;
+    background: rgb(30, 152, 168);
+    color: #eee;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 0.5px;
+    width: 100%;
+    margin-right: 30px;
+}
+
+.fa-comment-medical .submit-btn button:hover {
+    background: #b6b6b6;
+}
+
+.fa-comment-medical .close-btn {
+    position: absolute;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 15px;
+    right: 4%;
+    top: 4%;
+    cursor: pointer;
+}
+
+.fa-comment-medical .post .text {
+    display: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+}
+
+/* #############################    Start Responsive    ################################### */
+
+@media(max-width: 800px) {
+    nav .info h2 {
+        font-family: sans-serif;
+        padding: 5px 10px;
+        letter-spacing: 2px;
+        font-size: 25px;
+    }
+
+    .list {
+        background-color: transparent;
+        position: fixed;
+        right: 0;
+        top: 0;
+        border-radius: 4px;
+        overflow: hidden;
+    }
+
+    .list .list-btn {
+        position: relative;
+        height: 60px;
+        width: 50px;
+        margin: 0 auto;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        pointer-events: auto;
+    }
+
+    .list .list-btn span {
+        position: absolute;
+        top: 25%;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        border-radius: 5px;
+        background-color: black;
+    }
+
+    .list .list-btn span:nth-child(2) {
+        top: 50%;
+    }
+
+    .list .list-btn span:nth-child(3) {
+        top: 75%;
+    }
+
+    .list .list-content {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        top: 0;
+        text-align: center;
+        background-color: #eee;
+        transition: all 1s ease;
+    }
+
+    .list .list-content li {
+        list-style: none;
+        cursor: pointer;
+        padding: 10px 30px;
+        border-top: 1px solid #a5a5a5;
+        margin: 0;
+    }
+
+    .list .list-content li:hover {
+        background-color: white;
+    }
+
+    .list-content li a {
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif;
+    }
+
+    .list-content.show {
+        height: 0;
+    }
+
+    .search-area {
+        width: 600px;
+    }
+
+    .search-area .search-contianer */ .parameter-area {
+        top: 115px;
+    }
+
+    .parameter-area-btn {
+        right: -150px;
+        height: 40px;
+    }
+
+    .parameter-area-btn .title {
+        padding: 5px;
+    }
+
+    .login-area {
+        left: 10px;
+    }
+
+    .selecte-field {
+        width: 200px;
+    }
+
+    nav .user_picture {
+        margin-right: 10px;
+    }
+}
+
+@media(max-width: 400px) {
+    nav {
+        padding: 0;
+    }
+
+    header {
+        height: 50px;
+    }
+
+    nav .info h2 {
+        font-family: sans-serif;
+        padding: 5px 10px;
+        letter-spacing: 2px;
+        font-size: 25px;
+        margin: 0 10px;
+    }
+
+    .list {
+        background-color: transparent;
+        top: 0;
+        border-radius: 4px;
+    }
+
+    .list .list-btn {
+        position: relative;
+        height: 40px;
+        width: 40px;
+        margin: 0 auto;
+        cursor: pointer;
+        pointer-events: auto;
+        top: 5px;
+        margin-bottom: 5px;
+    }
+
+    .list .list-btn span {
+        position: absolute;
+        top: 20%;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        border-radius: 5px;
+        background-color: black;
+    }
+
+    .selecte-field {
+        top: 45px;
+    }
+
+    .selecte-field .selecte-text {
+        margin-bottom: 5px;
+    }
+
+    .list .list-btn span:nth-child(2) {
+        top: 50%;
+    }
+
+    .list .list-btn span:nth-child(3) {
+        top: 75%;
+    }
+
+    .list .list-content {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        background-color: #eee;
+        transition: all 1s ease;
+    }
+
+    .list .list-content li {
+        list-style: none;
+        cursor: pointer;
+        padding: 10px 30px;
+        border-top: 1px solid #a5a5a5;
+        margin: 0;
+    }
+
+    .list .list-content li:hover {
+        background-color: white;
+    }
+
+    .list-content li a {
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif;
+    }
+
+    .list-content.show {
+        height: 0;
+    }
+
+    .search-area .search-contianer {
+        max-width: 400px;
+        height: 50px;
+    }
+
+    .search-area .search-contianer {
+        max-width: 370px;
+    }
+
+    .parameter-area-btn {
+        right: -125px;
+        height: 40px;
+        width: 175px;
+        top: 55px;
+    }
+
+    .parameter-area {
+        width: 175px;
+        top: 92px;
+    }
+
+    .parameter-area-btn .title {
+        padding: 5px;
+    }
+
+    .login-area {
+        left: 10px;
+    }
+
+    main section {
+        height: 250px;
+    }
+}
+
+section {
+    width: 100%;
+    height: 400px;
+    margin-top: 0.9rem;
+    position: relative;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    background: url('/imges/morroco_img.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+section .blur {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    position: absolute;
+}
+
+section .title {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2rem;
+    font-weight: 900;
+    width: 600px;
+    padding: 20px;
+    color: var(--title-color);
+}
+
+section .title>#cities {
+    color: crimson;
+    font-size: 2.1rem;
+}
+
+main {
+    background-color: rgb(231, 231, 231);
+}

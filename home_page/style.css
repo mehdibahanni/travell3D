@@ -1,0 +1,968 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+:root{
+    --nav-color : rgb(255, 251, 251);
+    --body-color: rgba(255, 255, 255, 0.993);
+    --button-color: white;
+    --button-bg: black;
+    --list-color: white;
+    --text-color: black;
+
+}
+body{
+    background-color: rgb(231, 231, 231);
+    height: 100vh;
+}
+    /* Start Nav Bar */
+header{
+    width: 100%;
+    height: 69px;
+}
+
+nav{
+    background-color: var(--nav-color);
+    color: white;
+    position: fixed;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    z-index: 999;
+}
+nav .info{
+    width: 80%;
+    padding: 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+nav .info h2{
+    padding: 5px 10px;
+    font-family: sans-serif;
+    letter-spacing: 4px;
+    font-size: 35px;
+    border-radius: 5px;
+    background-color:  var(--button-bg);
+    color: var(--button-color);
+}
+.lists ul{
+    list-style: none;
+    display: flex;
+}
+.lists ul li{
+    padding:  10px 0;
+    margin: 0 15px;
+    cursor: pointer;
+    border: 2px solid transparent;
+    text-align: center;
+    transition: 0.3s;
+}
+.lists ul li a{
+    color: var(--text-color);
+    text-decoration: none;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+   text-transform: uppercase;
+   font-size: 15px; 
+}
+.login-area{
+    display: flex;
+    justify-content: center;
+    width: 20%;
+    /* display: none; */
+}
+button{
+    width: 120px;
+    height: 40px;
+    border: none;
+    font-family: sans-serif;
+    background-color:  var(--button-bg);
+    color: var(--button-color);
+    border-radius: 5px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+/* End Nav Bar */
+/* Start Login Area */
+input{
+    color: black !important;
+    border-color: black !important;
+
+}
+.main-login{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.main-login.show{
+    display: block;
+    z-index: 999; 
+    position: fixed;
+}
+.main-login .login-contianer{
+    color: var(--text-color);
+    background-color: white;
+    width: 400px;
+    padding: 10px 60px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 1px 1px 2px rgb(0, 0, 0, 0.2);
+    border-radius: 5px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.main-login .logo{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.main-login .logo h4{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--text-color);
+    padding: 0 120px;
+}
+.main-login .logo .close-btn{
+    font-size: 20px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+.main-login .login-contianer .username input, 
+.main-login .login-contianer .password input {
+    color: white;
+    padding: 20px;
+    outline: none;
+    border: none;
+    margin-bottom: 20px ;
+    background-color: transparent;
+    font-size: 15px;
+    transition: 0.1s;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+
+::-webkit-input-placeholder{
+    color: rgb(7, 7, 7) !important;
+    font-family: sans-serif;
+    font-size: 15px;
+}
+.main-login .password,
+.main-login .username{
+    position: relative;
+}
+.main-login .username .far.fa-envelope{
+    position: absolute;
+    right: 20px;
+    bottom: 40px;
+    color: rgb(136, 133, 133);
+    transition: 0.5s ease;
+}
+.main-login .password .fas.fa-lock-open{
+    position: absolute;
+    right: 20px;
+    bottom: 41px;
+    color: rgb(136, 133, 133);
+    transition: 0.5s ease;
+}
+.main-login .buttons-area{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 10px;
+}
+.main-login .login-button{
+    padding: 10px 20px;
+    border: none;
+    font-family: sans-serif;
+    background-color: var(--button-bg);
+    color: white !important;
+    border-radius: 5px;
+    font-size: 15px;
+    letter-spacing: 2px;
+    cursor: pointer;
+    transition: 0.5s ease;
+    margin: 10px 0;
+}
+.main-login .regist,
+.main-login .forget a{
+    font-size: 15px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+    cursor: pointer;
+    color: rgba(144, 144, 144, 0.713);
+    transition: 0.3s ease;
+}
+.main-login .forget{
+    text-align: center;
+}
+.main-login .regist:hover,
+.main-login .forget a:hover{
+    color: black;
+}
+/* End Login Area */
+
+/* Start Registe Area */
+.registe-area{
+    position: absolute;
+    background-color: rgb(0, 0, 0, 0.5);
+    display: none;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.registe-area.show{
+    display: block;
+    z-index: 999;
+    position: fixed;
+}
+.registe-area .registe-content{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 12px;
+    max-width: 100%;
+    width: 400px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+}
+.registe-area .registe-content h3{
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+}
+.registe-content .username{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    margin: 0 0 10px 0;
+    padding: 0;
+    
+}
+.registe-area .registe-content .username input[type="text"]{
+    background-color: transparent;
+    color: black;
+    outline: none;
+    border: none;
+    padding: 10px 0 10px 5px;
+    border-bottom: 1px solid black;
+    width: 45%;
+}
+    /* Gender*/
+.sex-area{
+    width: 98%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 0 10px;
+}
+
+.sex-area .man-contianer{
+    width: 45%;
+    padding: 10px 20px;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+.sex-area .woman-contianer{
+    padding: 10px;
+    margin: 10px;
+    width: 50%;
+    color: black;
+    border: 1px solid black;
+    border-radius: 5px;
+    text-align: center;
+}
+.sex-area label{
+    font-size: 16px;
+    font-family: sans-serif;
+    letter-spacing: 2px;
+}
+    /* Start Styling Date Input */
+/* Apply styles to the date input */
+.registe-area .date{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.registe-area input[type="date"] {
+    padding: 0.5em;
+    border: 1px solid #ccc; 
+    border-radius: 4px;
+    outline: none;
+    background: 0;
+    margin: 0 10px;
+    color: rgb(17, 17, 17);
+    font-size: 16px;
+    width: 200px;
+    text-align: center;
+    position: relative;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+    color: black;
+    padding: 10px;
+    border-radius: 50%;
+    border: none;
+}
+    /* End Styling Date Input */
+    /*  email and number area  */
+.registe-area .info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.registe-area .info input[type="number"] {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 10px 0 10px 5px;
+    border-bottom: 1px solid ;
+    width: 50%;
+}
+.info input[type="number"]:focus{
+    outline: none;
+}
+.registe-content .info input[type="email"] {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 10px 0 10px 5px;
+    border-bottom: 1px solid;
+    width: 45%;
+}
+.registe-content .info input[type="email"]:focus{
+    outline: none;
+}
+
+    /* start css on select */
+.selete-area{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 10px 0;
+}
+select {
+    width: 120px;
+    height: 30px;
+    border-radius: 5px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    background-color: transparent;
+    color: #333;
+    text-align: center;
+    color: black;
+    border: 2px solid black;
+    transition: 0.5s ease-out;
+
+  /* Customize appearance of the dropdown arrow */
+  /* appearance => This removes the default dropdown arrow */ 
+}
+select:focus{
+    outline: none;
+}
+.registe-content .selete-area .other{
+    width: 100%;
+    text-align: center;
+}
+.registe-content .selete-area .other input[type="text"]{
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid;
+    padding: 0 0 10px 40px ;
+    width: 70%;
+}
+.selete-area .other input[type="text"]:focus{
+    outline: none;
+}
+/* Style the options within the dropdown */
+select option {
+    background-color: transparent;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  color: #333;
+}
+    /* password area */
+.registe-content .password{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.registe-content .first-password,
+.registe-content .second-password{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 7px 0 7px;
+    position: relative;
+}
+.registe-content .first-password input,
+.registe-content .second-password input{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    padding: 10px 0 10px 5px;
+    border-bottom: 1px solid;
+    width: 100%;
+}
+ input[type="password"]:focus{
+    outline: none;
+}
+.registe-content .fas.fa-lock-open{
+    position: absolute;
+    right: 1px;
+    color: rgb(152, 152, 152);
+}
+.registe-content .password .fas.fa-lock-open:hover{
+    color: rgb(36, 35, 35);
+    cursor: pointer; 
+}
+.registe-content .password .fas.fa-lock-open.show{
+    color: var(--text-color);
+}
+.registe-content .buttons{
+    display: flex;
+    justify-content: center; 
+}
+.registe-content .buttons input[type="submit"]{
+    padding: 10px 30px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: 0;
+    background-color: var(--button-bg);
+    color: white !important;
+    font-size: 16px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+/* End Registe Area */
+    /* Start Main */
+
+/* Start Selecte Options */
+
+.selecte-field{
+    position: fixed;
+    width: 250px;
+    padding: 10px;
+    z-index: 1;
+    display: none;
+}
+ .selecte-field .selecte-text{
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.901);
+    overflow: hidden;
+    border-radius: 5px;
+    font-family: sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 20px;
+    cursor: pointer;
+    
+}
+ .selecte-field .selecte-text img{
+    height: 15px;
+    width: 15px;   
+    transition: 0.4s;
+
+}
+ .selecte-field .options{
+    background-color: rgba(255, 255, 255, 0.89);
+    border-radius: 5px;
+    cursor: pointer;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.selecte-field .options .option{
+    box-sizing: border-box;
+    width: 100%;
+    list-style: none;
+    padding: 15px 0 15px 20px;
+    position: relative;
+    font-family: sans-serif;
+    font-size: 17px;
+    display: flex;
+}
+.selecte-field .options .option p{
+    padding-left: 20px;
+}
+.selecte-field .options .option:not(:last-child){
+    border-bottom: 1px solid rgb(201, 201, 201);
+    
+}
+.selecte-field .options .option i .fa-solid.fa-hotel{
+    position: absolute;
+    width: 1px;
+
+}
+ .selecte-field .options .option:hover{
+    background-color: rgba(255, 255, 255, 1);
+}
+ .selecte-field ul li p{
+    font-size: 15px;
+    padding-left: 45px;
+}
+    /* javaSript  */
+.selecte-field .options.show{
+    visibility: visible;
+    transition: 0.3s ease;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+    z-index: 999;
+}
+.selecte-field .selecte-text img.rotate{
+    transition: 0.4s;
+    transform: rotate(180deg);
+} 
+/* End Selecte Options */
+/* ##########################################################################" */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+.card {
+    width: 300px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    margin: 20px;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    position: relative;
+    overflow: hidden;
+
+}
+.card-content p{
+    line-height: 30px;
+}
+.card img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+.card h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+.review-content p {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 10px;
+}
+.category {
+    font-weight: bold;
+}
+.evaluation {
+    color: #009900;
+}
+.reviews {
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 10px 10px;
+    transition: top 0.3s ease;
+    z-index: 1;
+    max-height: 540px;
+    overflow-y: auto;
+}
+.reviews.show {
+    top: 0;
+}
+.review {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+.review:last-child {
+    border-bottom: none; /* Remove border for the last review */
+}
+.show-reviews {
+    color: blue;
+    cursor: pointer;
+    text-decoration: underline;
+}
+.comment-btn {
+    /* padding: 10px 15px; */
+    background-color: darkcyan;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    margin: 10px 0px;
+    width: 100%;
+}
+/* New CSS styles for comment input */
+
+/* Start Search Area */
+.search-area{
+    height: calc(100vh - 70%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 40px 0px 40px;
+}
+.search-area .search-contianer{
+    width: 100%;
+    max-width: 800px;
+    padding: 20px 40px;
+    border-radius: 50px;
+    border: none;
+    outline: none;
+    position: relative;
+    font-size: 23px;
+    font-family: sans-serif;
+    background-color: white;
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+.search-area .search-contianer .search-icone{
+    width: 27px;
+    height: 27px;
+}
+.search-area .search-contianer input[type="search"] {
+    padding: 10px 30px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+}
+.search-area .search-contianer::-webkit-input-placeholder{
+    font-family: sans-serif;
+    font-size: 17px;
+}
+.search-area::before{
+    display: none;  
+}
+    /* End Search Area */
+
+/* Start Parameter Area */
+.parameter-area-btn{
+    width: 200px;
+    height: 50px;
+    background-color: var(--nav-color);
+    position: fixed;
+    right: 0;
+    top: 75px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px 0 0;
+    z-index: 1;
+    overflow: hidden;
+    padding: 0 10px
+}
+.parameter-area-btn.active{
+    left: 97%;
+}
+.parameter-area-btn .title{
+    background-color: var(--button-bg);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-weight: 400;
+    font-size: 19px;
+}
+.parameter-btn{
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+.parameter-btn span{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--button-bg);
+    left: 0;
+    top: 25%;
+    transition: 0.3s;
+}
+.parameter-btn span:nth-child(2){
+    position: absolute;
+    width: 70%;
+    height: 4px;
+    background-color: var(--button-bg);
+    left: 0;
+    top: 50%;
+}
+ .parameter-btn span:nth-child(3){
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: var(--button-bg);
+    left: 0;
+    top: 75%;
+}
+.parameter-area{
+    width: 200px;
+    background-color: var(--nav-color);
+    position: fixed;
+    right: 0;
+    top: 125px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    border-radius: 0 5px;
+    z-index: 5;
+    overflow: hidden;
+}
+.add-new-card a{
+    text-decoration: none;
+    color: black;
+}
+.parameter-area .parameter:nth-child(1){
+    border-top: 1px solid black;
+}
+.parameter-area.active{
+    left: 100%;
+}
+.parameter-area .parameter-btn{
+    width: 30px;
+    height: 30px;
+    /* border: 2px solid white; */
+    position: relative;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.parameter-area .parameter{
+    width: 100%;
+    padding: 10px 0 10px 10px;
+    background-color: rgba(255, 255, 255, 0.901);
+    color: black;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    /* position: absolute; */
+}
+.parameter-area .parameter:not(:last-child){
+    border-bottom: 1px solid rgb(201, 201, 201)
+}
+.parameter-area .parameter:hover{
+    background-color: rgb(218, 216, 216);
+    cursor: pointer; 
+}
+.parameter-area .parameter img{
+    width: 30px;
+    height: 30px;
+    background-size: cover;
+    left: 20px;
+    margin: 0 10px;
+}
+
+/* End Parameter Area */
+
+/* ############################################################################### */
+.fa-comment-medical {
+    bottom: 0;
+    position: absolute;
+    left: 0;
+    width: 300px;
+    background: #eeeded;
+    padding: 20px 30px;
+    border: 1px solid #d1d1d1;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    display: none;
+}
+.fa-comment-medical form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.fa-comment-medical::before{
+    display: none;
+}
+.fa-comment-medical .fa-weight-star input {
+    display: none;
+}
+.fa-comment-medical input:not(:checked) + label:hover,
+.fa-comment-medical input:not(:checked) + label:hover ~ label {
+    color: rgb(0, 138, 57);
+}
+.fa-comment-medical form input:checked ~ label {
+    color: rgb(0, 138, 57);
+}
+.fa-comment-medical form input#rate-5:checked ~ label {
+    color: rgb(0, 160, 67);
+    text-shadow: 0 0 20px rgb(0, 160, 67);
+    color: black;
+}
+.fa-weight-star label {
+    font: 40px;
+    color: #b8b8b8;
+    margin: 10px;
+    padding: 0 0 10px 0;
+    float: right;
+}
+
+.fa-comment-medical .textarea {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+.fa-comment-medical .textarea textarea {
+    height: 100px;
+    width: 100%;
+    border: 1px solid rgb(196, 196, 196);
+    outline: none;
+    background: #ffffff;
+    color: #020202 !important;
+    padding: 10px;
+    resize: none;
+    overflow-y: auto;
+    font-size: 15px;
+    font: 500;
+}
+.fa-comment-medical .submit-btn {
+    height: 45px;
+    width: 100%;
+    margin-top: 20px;
+    display: fle;
+}
+.fa-comment-medical .submit-btn button {
+    margin: 0 auto;
+    height: 100%;
+    outline: none;
+    background: rgb(30, 152, 168);
+    color: #eee;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: sans-serif;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 0.5px;
+    width: 100%;
+    margin-right: 30px;
+}
+.fa-comment-medical .submit-btn button:hover {
+    background: #b6b6b6;
+}
+.fa-comment-medical .close-btn {
+    position: absolute;
+    color: #333;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    font-size: 15px;
+    right: 4%;
+    top: 4%;
+    cursor: pointer;
+}
+
+.fa-comment-medical .post .text {
+display: none;
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+}
+
+/* #############################    Start Responsive    ################################### */
+
+@media(min-width: 755px){
+    .list{
+        background-color: white;
+        position: fixed;
+        right: 0;
+        border-radius: 4px;
+        overflow: hidden;
+        transition: 1s ease;
+    }
+    .list .list-btn{
+        position: relative;
+        height: 30px;
+        width: 30px;
+        background-color: aliceblue;
+        margin: 0 auto;
+        cursor: pointer;
+    }
+    .list .list-btn span{
+        position: absolute;
+        top: 25%;
+        left: 0;
+        width: 100%;
+        height: 3px;
+        border-radius: 5px;
+        background-color: black;
+    }
+    .list .list-btn span:nth-child(2){ top: 50%; }
+    .list .list-btn span:nth-child(3){ top: 75%; }
+    .list .list-content{
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        transition: 1s ease;
+        background-color: #eee;
+    }
+    .list .list-content li {
+        padding: 10px;
+        list-style: none;
+        margin: auto;
+        cursor: pointer;
+        padding: 10px 30px;
+        border-top: 1px solid #a5a5a5;
+    }
+    .list .list-content li:hover{
+        background-color: white;
+    }
+    .list-content li a{
+        text-decoration: none;
+        color: black;
+        font-family: sans-serif;
+    }
+    .list-content.show{
+        height: 0;
+    }
+}

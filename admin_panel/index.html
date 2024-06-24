@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>admin dashboard</title>
+</head>
+<body>
+    
+<div class="contianer">
+    <!-- sidebar section -->
+    <aside>
+        <div class="toggle">
+            <div class="logo">
+                <img src="/imges/WhatsApp Image 2023-12-23 at 02.00.23_66bceade.jpg" alt="">
+                <h2>Travell<span class="danger">3D</span></h2>
+            </div>
+            <div class="close" id="clsoe-btn">
+                <span class="material-symbols-outlined">
+                    close
+                </span>                
+            </div>
+        </div>
+        <!-- sTart sidebar -->
+        <div class="sidebar">
+            <a href="#">
+                <span class="material-symbols-outlined">
+                    dashboard_customize
+                </span>
+                <h3>Dashboard</h3>
+            </a>
+            <a href="/user_home_page/">
+                <span class="material-symbols-outlined">
+                    home
+                </span>
+                <h3>Home page</h3>
+            </a>
+            <a href="#">
+                <span class="material-symbols-outlined">
+                    person
+                </span>
+                <h3>User</h3>
+            </a>
+            <a href="#">
+                <span class="material-symbols-outlined">
+                    History
+                </span>
+                <h3>History</h3>
+            </a>
+            <a href="#" class="active">
+                <span class="material-symbols-outlined">
+                    analytics
+                </span>
+                <h3>Aanlytics</h3>
+            </a>
+            <a href="#">
+                <span class="material-symbols-outlined">
+                    report
+                </span>
+                <h3>Reports</h3>
+            </a>
+            <a href="#">
+                <span class="material-symbols-outlined">
+                    email
+                </span>
+                <h3>tickets </h3>
+            </a>
+            <a href="#">
+                <span class="material-symbols-outlined">
+                    settings
+                </span>
+                <h3>Settings</h3>
+            </a>
+            <a href="/add_cards/index.html">
+                <span class="material-symbols-outlined">
+                    add
+                </span>
+                <h3>New Card</h3>
+            </a>
+            <a href="#">
+                <span class="material-symbols-outlined">
+                    logout
+                </span>
+                <h3>Log Out</h3>
+            </a>
+        </div>
+    </aside>
+
+    <!-- End aside -->
+    <main>
+        <h1>Analytics</h1>
+        <div class="analys">
+            <div class="sales">
+                <div class="status">
+                    <div class="info">
+                        <h3>Total Sales</h3>
+                        <h1>$65,024</h1>
+                    </div>
+                    <div class="progress">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="percentage">
+                            <p>+81%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="visite">
+                <div class="status">
+                    <div class="info">
+                        <h3>Total Visite</h3>
+                        <h1>41,024</h1>
+                    </div>
+                    <div class="progress">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="percentage">
+                            <p>-40%</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="search">
+                <div class="status">
+                    <div class="info">
+                        <h3>Searchres</h3>
+                        <h1>500,024</h1>
+                    </div>
+                    <div class="progress">
+                        <svg>
+                            <circle cx="38" cy="38" r="36"></circle>
+                        </svg>
+                        <div class="percentage">
+                            <p>+24%</p>
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
+        <!-- End of analys -->
+
+        <!-- Start New User -->
+        <div class="new-user">
+            <h2>New User</h2>
+            <div class="list-user">
+                <div class="user">
+                    <img src="/admin_panel/WhatsApp Image 2023-12-23 at 02.00.23_66bceade.jpg">
+                    <h1>Mehdi</h1> 
+                    <p>5 min ago</p>
+                </div>
+                <div class="user">
+                    <img src="/admin_panel/WhatsApp Image 2023-12-23 at 02.00.23_66bceade.jpg">
+                    <h1>Ahlam</h1> 
+                    <p>5 min ago</p>
+                </div>
+                <div class="user">
+                    <img src="/admin_panel/WhatsApp Image 2023-12-23 at 02.00.23_66bceade.jpg">
+                    <h1>Fatin</h1> 
+                    <p>5 min ago</p>
+                </div>
+                <div class="user">
+                    <img src="/admin_panel/plus_icon.png">
+                    <p>New User</p>
+                </div>
+            </div>
+        </div>
+        <!-- End New User -->
+
+        <!-- Start Recente Order -->
+        <div class="recent-order">
+            <h2>Recent Orders </h2>
+             <table>
+                <thead>
+                    <tr>
+                        <th>course name</th>
+                        <th>course payment</th>
+                        <th>course number</th>
+                        <th>status</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+            <a href="#">Show All</a>
+        </div>
+    </main>
+
+<!-- End main section -->
+
+<!-- right section -->
+<div class="right-section">
+    <div class="nav">
+        <button id="menu-btn">
+            <span class="material-symbols-outlined">
+                menu
+            </span>
+        </button>
+        <div class="darck-mode">
+            <span class="material-symbols-outlined active">
+                light_mode
+            </span>
+            <span class="material-symbols-outlined">
+                dark_mode
+            </span>
+        </div>
+    
+    <div class="profile">
+        <div class="info">
+            <p>hey, <b>Mehdi</b>
+            </p>
+            <small class="text-metud">Onwer</small>
+        </div>
+        <div class="picture-profile">
+            <img src="/imges/WhatsApp Image 2023-12-23 at 02.00.23_66bceade.jpg">
+        </div>
+    </div>
+</div>
+    <div class="user-profile">
+        <div class="header">
+            <div class="logo">
+                <img src="/imges/WhatsApp Image 2023-12-23 at 02.00.23_66bceade.jpg">
+                <h2>Travelling</h2>
+                <p>Full-Stack Developper</p>
+            </div>
+        </div>
+    </div>
+        <div class="reminders">
+            <div class="header">
+                <h2>Reminder</h2>
+                <span class="material-symbols-outlined">
+                    notifications
+                </span>
+            </div>
+        <div class="notifications">
+            <div class="icons">
+                <span class="material-symbols-outlined">
+                    volume_up
+                </span>
+            </div>
+            <div class="content">
+                <div class="info">
+                    <h3>Workshop</h3>
+                    <small class="textimuted">
+                        00:00 AM : 12:00 PM
+                    </small>
+                </div>
+                <span class="material-symbols-outlined">
+                    more_vert
+                </span>
+            </div>
+        </div>
+        <div class="notifications desactive">
+            <div class="icons">
+                <span class="material-symbols-outlined">
+                    edit
+                </span>
+            </div>
+            <div class="content">
+                <div class="info">
+                    <h3>Workshop</h3>
+                    <small class="textimuted">
+                        00:00 AM : 12:00 PM
+                    </small>
+                </div>
+                <span class="material-symbols-outlined">
+                    more_vert
+                </span>
+            </div>
+        </div>
+        <div class="notifications add-reminder">
+            <div>
+                <span class="material-symbols-outlined">
+                    add
+                </span>
+                <h3>Add Reminder</h3>
+            </div>
+        </div>
+</div>
+</div>
+
+<script src="order.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

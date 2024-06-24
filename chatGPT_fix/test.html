@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+/* .list{
+    width: 180px;
+    background-color: #eee;
+    border-radius: 5px;
+}
+.list-btn{
+    position: relative;
+    height: 30px;
+    width: 30px;
+    margin: 0 auto;
+    cursor: pointer;
+}
+.list-btn span{
+    position: absolute;
+    width: 100%;
+    height: 3px;
+    background-color: black;
+    border-radius: 5px;
+}
+.list-btn span:nth-child(1){ top: 25%; }
+.list-btn span:nth-child(2){ top: 50%; }
+.list-btn span:nth-child(3){ top: 75%; }
+
+.list-content{
+    width: 100%;
+}
+ul li{
+    list-style: none;
+    padding: 10px 0;
+
+}
+ul li:hover{
+    border-bottom: 1px solid black;
+}
+ul li a {
+    text-decoration: none;
+    color: black;
+    letter-spacing: 4px;
+}
+ul li:hover{
+    border-bottom: 1px solid black;
+} 
+*/
+
+    </style>
+</head>
+<body>
+
+<div class="list">
+    <div class="list-btn">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <ul class="list-content">
+        <li><a href="#">connection</a></li>
+        <li><a href="#">service</a></li>
+        <li><a href="#">about</a></li>
+        <li><a href="#">contact</a></li>
+    </ul>
+</div>
+    <script>
+        let list        = document.querySelector('.list'),
+            listContent = document.querySelector('.list-content');
+
+        list.addEventListener('click', ()=>{
+            list.classList.toggle('show');
+            listContent.classList.toggle('show');
+        })
+        
+    </script>
+</body>
+</html>

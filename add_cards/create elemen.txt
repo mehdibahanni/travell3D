@@ -1,0 +1,33 @@
+function addCards(){
+    // create cards
+  let comment = document.createComment(`card ${cardCount}`);
+  cardCount++;
+  let card = document.createElement('div'),
+      mainImage = document.createElement('img'),
+      h2 = document.createElement('h2'),
+      divCardContent = document.createElement('div'),
+      pAdrr = document.createElement('p'),
+      pLatidue = document.createElement('p'),
+      pLongitude = document.createElement('p'),
+      pCategory = document.createElement('p'),
+      pEvaluation = document.createElement('p'),
+        // in review
+      previews = document.createElement('p'),
+      strongReview = document.createElement('strong'),
+      span = document.createElement('span'),
+      spanURL = document.createElement('span'),
+      // out of review
+      reviews = document.createElement('div'),
+      revH3 = document.createElement('h3'),
+      commentBtn = document.createElement('button');
+
+      // Add Class
+      card.className = 'card';
+      mainImage.alt = `${categoryValue} Image`;
+      divCardContent.className = 'card-content';
+      span.className = 'reviews-count';
+      spanURL.className = 'show-reviews';
+      reviews.className = 'reviews';
+      commentBtn.className = 'comment-btn';
+  
+}
